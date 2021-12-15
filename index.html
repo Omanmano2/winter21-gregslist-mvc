@@ -29,11 +29,28 @@
     <div class="row flex-grow-1">
       <div class="col-2 bg-secondary py-3">
         <h4 class="selectable p-2" onclick="app.carsController.drawCars()">Cars</h4>
-        <h4 class="selectable p-2">Houses</h4>
+        <h4 class="selectable p-2" onclick="app.housesController.drawHouses()">Houses</h4>
         <h4 class="selectable p-2">Jobs</h4>
       </div>
       <div class="col-10">
         <div class="row" id="listings">
+          <!-- <div class="col-md-4 p-4">
+            <img src="${this.image}" alt="${this.model}-image">
+            <div class="p-3">
+              <p class="text-center"><b>SIZE - ADDRESS - ZIP</b></p>
+              <p class="m-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi.</p>
+            </div>
+            <div class="p-3 d-flex justify-content-between align-items-center">
+              <p class="m-0">$${this.price}</p>
+              <div class="d-flex align-items-center">
+                <p class="m-0">Color:</p>
+                <div class="color-box border border-dark" style="background-color: ${this.color};"></div>
+                <div>
+                  <i class="mdi mdi-delete selectable" onclick="app.houseController.removeHouse('${this.id}')"></i>
+                </div>
+              </div>
+            </div>
+          </div> -->
           <!-- <div class="col-md-4 p-4">
             <div class="bg-white shadow rounded">
               <img class="w-100 rounded-top" src="//placehold.it/200x200" alt="car">
