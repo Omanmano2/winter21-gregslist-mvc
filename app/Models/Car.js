@@ -15,8 +15,8 @@ export class Car {
   get Template() {
     return `
     <div class="col-md-4 p-4">
-      <div class="bg-white shadow rounded">
-        <img class="w-100 rounded-top" src="${this.imgUrl}" alt="${this.model}-image">
+    <img class="w-100 rounded-top" src="${this.imgUrl}" alt="${this.model}-image">
+    <div class="bg-white shadow rounded">
         <div class="p-3">
           <p class="text-center uppercase"><b>${this.make} - ${this.model} - ${this.year}</b></p>
           <p class="m-0">${this.description}</p>

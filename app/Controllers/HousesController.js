@@ -3,9 +3,9 @@ import { getHouseform } from "../Component/HouseForm.js";
 import { housesService } from "../Services/HousesService.js";
 
 function _drawHouses() {
-  const cars = ProxyState.houses
+  const houses = ProxyState.houses
   let template = ''
-  cars.forEach(h => template += h.Template)
+  houses.forEach(h => template += h.Template)
   document.getElementById('listings').innerHTML = template
 }
 export class HousesController {
@@ -41,6 +41,6 @@ export class HousesController {
 
     removeHouse(id){
       console.log('deleting', id)
-      carsService.removeHouse(id)
+      housesService.removeHouse(id)
     }
 }

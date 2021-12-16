@@ -3,7 +3,7 @@ import { House } from "../Models/House.js"
 
 class HousesService {
   removeHouse(id){
-    ProxyState.houses = ProxyState.house.filter(h = h.id !== id)
+    ProxyState.houses = ProxyState.houses.filter(h => h.id !== id)
   }
 
   createHouse(houseData){

@@ -1,5 +1,6 @@
 import { Car } from "./Models/Car.js"
 import { House } from "./Models/House.js"
+import { Job } from "./Models/Job.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
@@ -19,8 +20,13 @@ class AppState extends EventEmitter {
     new House({ address: '10110 Binary Court', year:'2001', price: 40000, zip: '27364', size: '1010 sq/ft', description: '1010101010 101010 101010', color: '#3c4055', imgUrl: 'https://thumbs.dreamstime.com/b/smart-house-background-abstract-glowing-binary-code-house-background-smart-house-concept-d-rendering-113932035.jpg'})
   ]
 
+  /** @type {import('./Models/Jobs').Job[]} */
   jobs = [
-    
+    new Job({name: 'Bingos Bongos', title: 'Bongo Sellsmen', pay: '8.00', imgUrl: 'https://m.media-amazon.com/images/I/61W1igWXdEL._AC_SL1500_.jpg', age: '18', experience: '2', description: 'Looking for a talented bongo-er' }),
+
+    new Job({name: 'TacoBurger', title: 'burger taco man', pay: '7', imgUrl: 'https://cdn.vox-cdn.com/thumbor/m7-WGxv_B0IZQDGXJjwso2W_yz4=/30x0:629x449/1400x1400/filters:focal(30x0:629x449):format(png)/cdn.vox-cdn.com/uploads/chorus_image/image/38808908/del-taco-bun-taco.0.png', age: '45', experience: '100', description: 'If you can cook burgers, tacos, and burgerTacos apply now' }),
+
+    new Job({name: 'Air Breather', title: 'respirator', pay: '72.50', imgUrl: 'https://i.pinimg.com/600x315/63/98/c7/6398c7d1fe1c7da7afba4e7837ba31b5.jpg', age: 'Any', experience: '10+', description:'In need of CO2'}),
   ]
 }
 

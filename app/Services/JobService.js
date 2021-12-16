@@ -1,4 +1,5 @@
-import { ProxyState } from "../AppState";
+import { ProxyState } from "../AppState.js";
+import { Job } from "../Models/Job.js";
 
 
 
@@ -8,8 +9,10 @@ removeJob(id){
 }
 
 createJob(jobData){
-  const Job = new Job(jobData)
-  ProxyState.jobs = [...ProxyState.jobs, jobs]
+  const job = new Job(jobData)
+  ProxyState.jobs = [...ProxyState.jobs, job]
 }
 
 }
+
+export const jobsServices = new JobService()
