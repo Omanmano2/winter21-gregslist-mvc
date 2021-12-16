@@ -12,11 +12,15 @@ class AppState extends EventEmitter {
   ]
   /** @type {import('./Models/House').House[]} */
   houses = [
-    new House({address: '1234 Harrington Way', price:20000 ,zip: '87465' , size: '2250 sq/ft', description: 'Previous owner was a MK IV spartan', color: '#a0b7bc', imgUrl: 'https://gamerliving.net/wp-content/uploads/2012/12/MasterChiefWhiteHouse.jpg'}),
+    new House({ address: '1234 Harrington Way', price: 20000, zip: '87465', size: '2250 sq/ft', description: 'Previous owner was a MK IV spartan', color: '#a0b7bc', imgUrl: 'https://gamerliving.net/wp-content/uploads/2012/12/MasterChiefWhiteHouse.jpg'}),
     
-    new House({address: '97866 DM Master Dr', price:30000 ,zip: '86354' , size: '3250 sq/ft', description: 'Smells like D&D', color: '#ff9b37', imgUrl: 'http://scrollmaster.net/wp-content/uploads/2020/02/IMG_0605.jpg'}),
+    new House({ address: '97866 DM Master Dr', price: 30000, zip: '86354', size: '3250 sq/ft', description: 'Smells like D&D', color: '#ff9b37', imgUrl: 'http://scrollmaster.net/wp-content/uploads/2020/02/IMG_0605.jpg'}),
     
-    new House({address: '10110 Binary Court', year:'2001',price:40000 ,zip: '27364' , size: '1010 sq/ft', description: '1010101010 101010 101010', color: '#3c4055', imgUrl: 'https://thumbs.dreamstime.com/b/smart-house-background-abstract-glowing-binary-code-house-background-smart-house-concept-d-rendering-113932035.jpg'})
+    new House({ address: '10110 Binary Court', year:'2001', price: 40000, zip: '27364', size: '1010 sq/ft', description: '1010101010 101010 101010', color: '#3c4055', imgUrl: 'https://thumbs.dreamstime.com/b/smart-house-background-abstract-glowing-binary-code-house-background-smart-house-concept-d-rendering-113932035.jpg'})
+  ]
+
+  jobs = [
+    
   ]
 }
 
