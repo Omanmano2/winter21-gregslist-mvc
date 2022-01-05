@@ -1,4 +1,6 @@
 export function getCarform() {
+  const newCar = 
+
   return `
   <form onsubmit="app.carsController.createCar()">
   <div class="mb-3 d-flex justify-content-between">
