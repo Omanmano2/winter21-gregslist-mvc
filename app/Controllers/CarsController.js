@@ -12,6 +12,7 @@ function _drawCars() {
 export class CarsController {
   constructor() {
     ProxyState.on('cars', _drawCars)
+    carsService.getAllCars()
   }
   drawCars() {
     _drawCars()
@@ -19,6 +20,7 @@ export class CarsController {
   }
 
   createCar() {
+    try {
     // prevents page reload
     window.event.preventDefault()
     console.log("submitted")
@@ -34,16 +36,39 @@ export class CarsController {
       description: form.description.value,
       imgUrl: form.imgUrl.value
     }
-    carsService.createCar(carData)
+    if (id == "undefined") {
+      await carsService.createCar(carData)
+    } else {
+      await carsService.editCar(carData, id)
+    }
     // clear form
     form.reset()
     // close modal
     // @ts-ignore
     bootstrap.Modal.getOrCreateInstance(document.getElementById('new-listing')).hide()
+    } catch (error) {
+      console.log(error.message)
+    }
   }
 
-  removeCar(id) {
-    console.log('deleting', id)
-    carsService.removeCar(id)
+  async removeCar(id) {
+    try {
+      const found = ProxyState.cars.find(c => c.id == id)
+      console.log('found car for delete',foundCar)
+    } catch (error) {
+      console.log(error.message)
+    }
+  }
+
+  async editCar(id){
+    try {
+      let foundCar = ProxyState.cars.find(c => c.id == id)
+      bootstrap.Modal.getOrCreateInstance(document.getElementById('new-listing')).toggle()
+      document.getElementById('modal-body-slot').innerHTML = getCarform(foundCar)
+      console.log('found car in edit', foundCar)
+    } catch (error) {
+      toast(error.message)
+      console.log(error.message)
+    }
   }
 }

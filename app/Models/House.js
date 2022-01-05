@@ -15,7 +15,7 @@ export class House {
    get Template() {
     return `
     <div class="col-md-4 p-4">
-    <img class="w-100 rounded-top" src="${this.imgUrl}" alt="${this.model}-image">
+    <img class="w-100 rounded-top" src="${this.imgUrl}" alt="image">
     <div class="bg-white shadow rounded">
         <div class="p-3">
           <p class="text-center uppercase"><b>${this.address} - ${this.zip} - ${this.size}'sq/ft'</b></p>
